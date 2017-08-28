@@ -1,15 +1,15 @@
 ### The whole project ###
 
 This is part of the Yildiz-Engine project, a set of modules handling the different parts of a video game, or multimedia application creation.
-The project is built around the java language, every module expose a neat API to do anything related to its responsabilities.
+The project is built around the java language, every module expose a neat API to do anything related to its responsibilities.
 
 ### This module ###
 
 This module is mostly used for native build configuration, it contains only the Maven POM parent to all other native modules where all the Maven plugins configuration and versions are stored.
 
-### Informations ###
+### Information ###
 
-* Additional informations on https://yildiz-games.be
+* Additional information on https://yildiz-games.be
 
 ### Build ###
 
