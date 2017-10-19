@@ -101,6 +101,17 @@
                 </includes>
               </fileset>
               <fileset>
+                <directory>src/main/scripts/win64/java</directory>
+              </fileset>
+              <fileset>
+                <directory>src/main/scripts/win64</directory>
+                <includes>
+                  <include>libgcc_s_seh-1.dll</include>
+                  <include>libstdc++-6.dll</include>
+                  <include>mingw-toolchain.cmake</include>
+                </includes>
+              </fileset>
+              <fileset>
                 <directory>src/main/includes</directory>
                 <includes>
                   <include>NativeMovable.hpp</include>
