@@ -33,7 +33,7 @@
   </parent>
 
   <artifactId>parent-native</artifactId>
-  <version>1.0.0</version>
+  <version>2.0.0-SNAPSHOT</version>
 
   <name>Yildiz Parent Native</name>
   <description>Project to hold the parent pom for all native child projects.</description>
@@ -153,59 +153,6 @@
             </execution>
           </executions>
         </plugin>
-      </plugins>
-    </pluginManagement>
-  </build>
-
-  <profiles>
-    <profile>
-      <id>linux64</id>
-      <activation>
-        <property>
-          <name>env</name>
-          <value>linux64</value>
-        </property>
-      </activation>
-      <properties>
-        <nativeEnv>linux64</nativeEnv>
-      </properties>
-      <build>
-        <plugins>
-          <plugin>
-            <artifactId>maven-jar-plugin</artifactId>
-            <configuration>
-              <classifier>linux64</classifier>
-            </configuration>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-    <profile>
-      <id>win64</id>
-      <activation>
-        <property>
-          <name>env</name>
-          <value>win64</value>
-        </property>
-      </activation>
-      <properties>
-        <nativeEnv>win64</nativeEnv>
-      </properties>
-      <build>
-        <plugins>
-          <plugin>
-            <artifactId>maven-jar-plugin</artifactId>
-            <configuration>
-              <classifier>win64</classifier>
-            </configuration>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-    <profile>
-      <id>native</id>
-      <build>
-        <plugins>
           <plugin>
             <artifactId>exec-maven-plugin</artifactId>
             <groupId>org.codehaus.mojo</groupId>
@@ -223,9 +170,12 @@
               </execution>
             </executions>
           </plugin>
-        </plugins>
-      </build>
-    </profile>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+
+  <profiles>
     <profile>
       <id>native-sonar</id>
       <build>
