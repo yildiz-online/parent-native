@@ -29,11 +29,11 @@
   <parent>
     <groupId>be.yildiz-games</groupId>
     <artifactId>parent</artifactId>
-    <version>2.1.0</version>
+    <version>2.1.1</version>
   </parent>
 
   <artifactId>parent-native</artifactId>
-  <version>2.0.0</version>
+  <version>2.0.1</version>
 
   <name>Yildiz Parent Native</name>
   <description>Project to hold the parent pom for all native child projects.</description>
@@ -77,7 +77,7 @@
       <dependency>
         <groupId>be.yildiz-games</groupId>
         <artifactId>common-native</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.2</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -90,6 +90,9 @@
           <artifactId>maven-clean-plugin</artifactId>
           <configuration>
             <filesets>
+              <fileset>
+                <directory>src/main/scripts/linux64/java</directory>
+              </fileset>
               <fileset>
                 <directory>src/main/scripts/win64/java</directory>
               </fileset>
