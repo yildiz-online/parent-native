@@ -1,10 +1,10 @@
-image: moussavdb/yildiz-build-image
+image: moussavdb/build-java
 
 pipelines:
   default:
     - step:
         script:
-          -mvn -s settings.xml package
+          - mvn -V -B -s settings.xml package
   branches:
     master:
       - step:
