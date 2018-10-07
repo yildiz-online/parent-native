@@ -29,7 +29,7 @@
   <parent>
     <groupId>be.yildiz-games</groupId>
     <artifactId>parent</artifactId>
-    <version>2.2.0-SNAPSHOT</version>
+    <version>2.2.0</version>
   </parent>
 
   <artifactId>parent-native</artifactId>
@@ -70,6 +70,7 @@
 
   <properties>
     <nativeEnv>none</nativeEnv>
+    <script>build.sh</script>
   </properties>
 
   <dependencyManagement>
@@ -167,7 +168,7 @@
                     <goal>exec</goal>
                   </goals>
                   <configuration>
-                    <executable>${basedir}/src/main/scripts/${nativeEnv}/build.sh</executable>
+                    <executable>${basedir}/src/main/scripts/${nativeEnv}/${script}</executable>
                     <workingDirectory>${basedir}/src/main/scripts/${nativeEnv}</workingDirectory>
                   </configuration>
                 </execution>
@@ -179,27 +180,15 @@
   <profiles>
     <profile>
       <id>native-sonar</id>
-      <build>
-        <plugins>
-          <plugin>
-            <artifactId>exec-maven-plugin</artifactId>
-            <groupId>org.codehaus.mojo</groupId>
-            <executions>
-              <execution>
-                <id>Build ${project.name} binding library for ${nativeEnv}</id>
-                <phase>compile</phase>
-                <goals>
-                  <goal>exec</goal>
-                </goals>
-                <configuration>
-                  <executable>${basedir}/src/main/scripts/${nativeEnv}/build_sonar.sh</executable>
-                  <workingDirectory>${basedir}/src/main/scripts/${nativeEnv}</workingDirectory>
-                </configuration>
-              </execution>
-            </executions>
-          </plugin>
-        </plugins>
-      </build>
+      <properties>
+        <script>build_sonar.sh</script>
+      </properties>
+    </profile>
+    <profile>
+      <id>from-windows</id>
+      <properties>
+        <script>build.bat</script>
+      </properties>
     </profile>
   </profiles>
 
