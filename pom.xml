@@ -62,7 +62,7 @@
   <scm>
     <connection>scm:git:https://bitbucket.org/yildiz-engine-team/parent-native</connection>
     <developerConnection>scm:git:https://bitbucket.org/yildiz-engine-team/parent-native</developerConnection>
-    <url>https://bitbucket.org/yildiz-engine-team/parent</url>
+    <url>https://bitbucket.org/yildiz-engine-team/parent-native</url>
   </scm>
 
   <packaging>pom</packaging>
