@@ -36,7 +36,7 @@
 
   <name>Yildiz Parent Native</name>
   <description>Project to hold the parent pom for all native child projects.</description>
-  <url>https://bitbucket.org/yildiz-engine-team/parent-native</url>
+  <url>https://github.com/yildiz-online/parent-native</url>
 
   <licenses>
     <license>
@@ -59,9 +59,9 @@
     <url>https://yildiz.atlassian.net</url>
   </issueManagement>
   <scm>
-    <connection>scm:git:https://bitbucket.org/yildiz-engine-team/parent-native</connection>
-    <developerConnection>scm:git:https://bitbucket.org/yildiz-engine-team/parent-native</developerConnection>
-    <url>https://bitbucket.org/yildiz-engine-team/parent-native</url>
+    <connection>scm:git:https://github.com/yildiz-online/parent-native</connection>
+    <developerConnection>scm:git:https://github.com/yildiz-online/parent-native</developerConnection>
+    <url>https://github.com/yildiz-online/parent-native</url>
   </scm>
 
   <packaging>pom</packaging>
