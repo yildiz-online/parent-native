@@ -77,7 +77,7 @@
       <dependency>
         <groupId>be.yildiz-games</groupId>
         <artifactId>common-native</artifactId>
-        <version>1.0.7</version>
+        <version>2.0.0-SNAPSHOT</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -101,14 +101,8 @@
                     <includes>
                       <include>libgcc_s_seh-1.dll</include>
                       <include>libstdc++-6.dll</include>
+                      <include>libwinpthread-1.dll</include>
                       <include>mingw-toolchain.cmake</include>
-                    </includes>
-                  </fileset>
-                  <fileset>
-                    <directory>src/main/includes</directory>
-                    <includes>
-                      <include>NativeMovable.hpp</include>
-                      <include>NativeMovableComponent.hpp</include>
                     </includes>
                   </fileset>
                 </filesets>
@@ -176,20 +170,6 @@
           </plugins>
         </pluginManagement>
       </build>
-  <profiles>
-    <profile>
-      <id>native-sonar</id>
-      <properties>
-        <script>build_sonar.sh</script>
-      </properties>
-    </profile>
-    <profile>
-      <id>from-windows</id>
-      <properties>
-        <script>build.bat</script>
-      </properties>
-    </profile>
-  </profiles>
 
 </project>
 
